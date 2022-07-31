@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] GameObject defender;
+    [SerializeField] Defender defenderPrefab;
 
     [SerializeField] bool isPlaceable;
     public bool IsPlaceable { get { return isPlaceable; } }
@@ -13,15 +13,12 @@ public class Waypoint : MonoBehaviour
     {
         if(isPlaceable)
         {
-            GameObject defenderPrefab = Instantiate(defender, transform.position, Quaternion.identity);
-            isPlaceable = false;   
+            bool isPlaced = defenderPrefab.CreateDefender(defenderPrefab, transform.position);
+            isPlaceable = !isPlaced;   
         }
     }
 
-    public bool GetIsPlaceable()
-    {
-        return isPlaceable;
-    }
+    
 }    
 
     

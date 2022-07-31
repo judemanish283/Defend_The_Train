@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c443414acf11a9b4fa89e4e1b2672d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defender: {fileID: 3219458064393657486, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+  defenderPrefab: {fileID: 7785629796360413120, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
   isPlaceable: 1
 --- !u!65 &1900225191001858718
 BoxCollider:
