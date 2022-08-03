@@ -6,8 +6,8 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
-    [SerializeField] float spawnTimer = 1f;
-    [SerializeField] int poolsize = 5;
+    [Range(0.1f, 30f)][SerializeField] float spawnTimer = 1f;
+    [Range(0, 50)][SerializeField] int poolsize = 5;
 
     GameObject[] pool;
 
@@ -48,10 +48,6 @@ public class ObjectPool : MonoBehaviour
     // So now when the game starts the objects are created in the pool and when spawnenemies 
     // is called it activates the first object and then exits the loop and when the 
     // coroutine calls it again it calls the method once more.
-
-    
-
-   
 
     IEnumerator SpawnEnemies()
     {
